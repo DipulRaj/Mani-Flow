@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Zone</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- ----------Header Section----------- -->
+
+    <div class="header">
+        <div class="section">
+            <div class="logo">
+                 <img src="NameLogo.png" alt="logo">
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li id="li-service"><a href="#">Services</a>
+                        <ul>
+                            <li><a href="#">Specialized Delivery</a></li>
+                            <li><a href="#">Old Furniture Removal</a></li>
+                            <li><a href="#">Flexible Scheduling</a></li>
+                            <li><a href="#">Customer Support</a></li>
+                            <li><a href="#">Customer Support</a></li>
+                            <li><a href="#">Design Help</a></li>  
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ----------------Hero-------------- -->
+
+    <div class="hero">
+
+        <div class="hero-content">
+           <div id="heading-para">
+                <h1>Your Dream Home Starts Here: Shop Furniture Online.</h1>
+           </div>
+
+
+            <div id="para">
+                <p>
+                    Browse a stunning collection of furniture designed to inspire and elevate every room. 
+                    With easy online ordering and convenient delivery, creating your perfect living space 
+                    has never been simpler.
+                </p>
+            </div>
+
+
+            <div id="button-list">
+                <button id="sign-up"><a href="#">Sign Up</a></button>
+                <button id="log-in"><a href="#">Log in</a></button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- --------------FeatureSection----------- -->
+
+    <div class="feature">
+        <div class="container">
+            <h1 id="feature-heading">Key Features</h1>
+
+            <div class="feature-lists">
+
+                <div>
+                    <br>
+                    <h1>Vast Furniture Selection</h1>
+                    <br>
+                    <p>
+                        Browse thousands of stylish pieces for every room and taste, 
+                        from modern minimalist to classic elegance, all in one curated collection.
+                    </p>
+                    <br><br>
+                </div>
+
+                <div>
+                    <br>
+                    <h1>High-Quality Visuals</h1>
+                    <br>
+                    <p>
+                        Explore products with stunning high-resolution images, 360° views, and lifestyle 
+                        shots to help you visualize pieces in your home.
+                    </p>
+                    <br><br>
+                </div>
+
+                <div>
+                    <br>
+                    <h1>Mobile-Friendly Shopping</h1>
+                    <br>
+                    <p>
+                        Enjoy a seamless and intuitive shopping experience on any device – desktop, 
+                        tablet, or smartphone – optimized for your convenience.
+                    </p>
+                    <br><br>
+                </div>
+
+                <div>
+                    <br>
+                    <h1>Smart Search & Filters</h1>
+                    <br>
+                    <p>
+                        Easily find your perfect match with powerful search, advanced filters, 
+                        and curated categories by style, material, and room.
+                    </p>
+                    <br><br>
+                </div>
+
+                <div>
+                    <br>
+                    <h1>Reliable Delivery & Assembly</h1>
+                    <br>
+                    <p>
+                        Benefit from secure, tracked delivery and optional professional assembly services 
+                        to make setting up your new furniture hassle-free.
+                    </p>
+                    <br><br>
+                </div>
+
+                <div>
+                    <br>
+                    <h1>Dedicated Customer Support</h1>
+                    <br>
+                    <p>
+                        Our friendly and knowledgeable team is ready to assist you with any questions or 
+                        concerns, ensuring a smooth experience from start to finish.
+                    </p>
+                    <br><br>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ----------------Footer Section---------------- -->
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#support">Support Center</a>
+                <a href="#careers">Careers</a>
+                <a href="#blog">Blog</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Furniture Zone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const header = document.querySelector('.header .section');
+        const nav = document.querySelector('.nav');
+    
+    
+        const toggle = document.createElement('button');
+        toggle.classList.add('mobile-menu-toggle');
+        toggle.innerHTML = '☰';
+        document.querySelector('.logo').parentNode.insertBefore(toggle, document.querySelector('.logo').nextSibling);
+    
+
+        toggle.addEventListener('click', function() {
+            const navUl = nav.querySelector('ul');
+            navUl.classList.toggle('active');
+            toggle.innerHTML = navUl.classList.contains('active') ? '✕' : '☰';
+        });
+    
+        document.addEventListener('click', function(e) {
+        if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+            nav.querySelector('ul').classList.remove('active');
+            toggle.innerHTML = '☰';
+        }
+        });
+        });
+    </script>
+
+</body>
+</html>
